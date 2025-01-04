@@ -196,5 +196,71 @@ export default class Display {
   };
   drawFooter = () => {
     const footer = document.querySelector("footer");
+    const h2 = document.createElement("h2");
+    h2.classList.add("contact-me");
+    h2.textContent = "Contact me";
+    footer.appendChild(h2);
+
+    const footerCopy = document.createElement("p");
+    footerCopy.classList.add("footer-copy");
+    footerCopy.textContent = `Please get in touch if you think our work could be mutually beneficial!`;
+    footer.appendChild(footerCopy);
+
+    const contactInfo = document.createElement("address");
+    contactInfo.classList.add("contact-info");
+    const addressDetails = document.createElement("p");
+    addressDetails.classList.add("address-details");
+    addressDetails.textContent = `42 Unknown Way
+    London
+    GH42 7OP`;
+    contactInfo.appendChild(addressDetails);
+
+    const phoneNumber = document.createElement("p");
+    phoneNumber.classList.add("phone-number");
+    phoneNumber.textContent = "047 0427 9777";
+    contactInfo.appendChild(phoneNumber);
+
+    const email = document.createElement("p");
+    email.classList.add("email");
+    email.textContent = "shrikeswallow.is.not.my@gmail.com";
+    contactInfo.appendChild(email);
+
+    // create social media list
+    const socials = document.createElement("ul");
+    socials.classList.add("social-media-list");
+
+    const github = document.createElement("li");
+    github.classList.add("github");
+    const githubAnchor = document.createElement("a");
+    githubAnchor.href = "https://github.com/ShrikeSwallow";
+    githubAnchor.ariaLabel = "GitHub Profile";
+    githubAnchor.target = "_blank";
+    const githubIcon = document.createElement("img");
+    githubIcon.classList.add("icon");
+    githubIcon.src =
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg";
+    githubIcon.alt = "";
+    githubAnchor.appendChild(githubIcon);
+    github.appendChild(githubAnchor);
+    socials.appendChild(github);
+
+    const linkedin = document.createElement("li");
+    linkedin.classList.add("linkedin");
+    const linkedinAnchor = document.createElement("a");
+    linkedinAnchor.href = "https://linkedin.com/ShrikeSwallow";
+    linkedinAnchor.ariaLabel = "LinkedIn Profile";
+    linkedinAnchor.target = "_blank";
+    const linkedinIcon = document.createElement("img");
+    linkedinIcon.classList.add("icon");
+    linkedinIcon.src =
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg";
+    linkedinIcon.alt = "";
+    linkedinAnchor.appendChild(linkedinIcon);
+    linkedin.appendChild(linkedinAnchor);
+    socials.appendChild(linkedin);
+
+    contactInfo.appendChild(socials);
+
+    footer.appendChild(contactInfo);
   };
 }
