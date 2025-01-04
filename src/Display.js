@@ -1,5 +1,10 @@
 import openInNew from "./images/open-in-new.svg";
 import calculator from "./images/calculator.PNG";
+import etchAsketch from "./images/etch-a-sketch.PNG";
+import ticTacToe from "./images/tic-tac-toe.PNG";
+import businessPage from "./images/business-page.PNG";
+import todoApp from "./images/todo-app.PNG";
+import battleships from "./images/battleships.PNG";
 export default class Display {
   constructor() {}
   initialize = () => {
@@ -88,6 +93,43 @@ export default class Display {
         screenshot: calculator,
         github: "https://github.com/ShrikeSwallow/calculator-top",
         preview: "https://shrikeswallow.github.io/calculator-top/",
+      },
+      {
+        name: "Etch-a-sketch",
+        description:
+          "CSS-based etch-a-sketch. I've added colour-changing functionality.",
+        screenshot: etchAsketch,
+        github: "https://github.com/ShrikeSwallow/etch-a-sketch",
+        preview: "https://shrikeswallow.github.io/etch-a-sketch/",
+      },
+      {
+        name: "Tic-tac-toe",
+        description: "My implementation of the tic-tac-toe game.",
+        screenshot: ticTacToe,
+        github: "https://github.com/ShrikeSwallow/tic-tac-toe-top",
+        preview: "https://shrikeswallow.github.io/tic-tac-toe-top/",
+      },
+      {
+        name: "Business page",
+        description: "An example of a static business website.",
+        screenshot: businessPage,
+        github: "https://github.com/ShrikeSwallow/business-page",
+        preview: "https://shrikeswallow.github.io/business-page/",
+      },
+      {
+        name: "To-do app",
+        description:
+          "A very simple project/task management system. Utilises local storage.",
+        screenshot: todoApp,
+        github: "https://github.com/ShrikeSwallow/todo-app",
+        preview: "https://shrikeswallow.github.io/todo-app/",
+      },
+      {
+        name: "Battleships",
+        description: "My implementation of the Battleships game.",
+        screenshot: battleships,
+        github: "https://github.com/ShrikeSwallow/battleship",
+        preview: "https://shrikeswallow.github.io/battleship/",
       },
     ];
 
