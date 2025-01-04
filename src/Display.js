@@ -5,6 +5,9 @@ import ticTacToe from "./images/tic-tac-toe.PNG";
 import businessPage from "./images/business-page.PNG";
 import todoApp from "./images/todo-app.PNG";
 import battleships from "./images/battleships.PNG";
+import guppySmall from "./images/guppy-xs.jpg";
+import guppy from "./images/guppy.jpg";
+import shrike from "./images/shrike.jpg";
 export default class Display {
   constructor() {}
   initialize = () => {
@@ -21,6 +24,7 @@ export default class Display {
     // create profile picture and caption
     const figure = document.createElement("figure");
     const figureImg = document.createElement("img");
+    figureImg.src = shrike;
     figureImg.alt = "";
     figure.appendChild(figureImg);
     const figcaption = document.createElement("figcaption");

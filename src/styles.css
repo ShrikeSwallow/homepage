@@ -12,14 +12,87 @@ h4,
 h5,
 h6 {
   font-family: "EB Garamond", serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.icon {
+  width: 24px;
+}
+
+header .icon,
+footer .icon {
+  width: 48px;
 }
 
 main {
+  background-image: url("./images/eclipse.svg");
+  background-repeat: no-repeat;
   padding: 16px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 100px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header figure img {
+  box-shadow: 0px 2px 10px 1px #030712;
+}
+
+header figure figcaption {
+  font-family: "EB Garamond", serif;
+  color: white;
+  font-size: 3rem;
+  transform: translateY(-100%);
+  text-shadow: 2px 2px gray;
+  margin-bottom: -2rem;
+}
+
+header figure img {
+  width: 60vw;
+}
+
+header article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header article > * {
+  margin: 0;
+}
+
+.social-media-list,
+.project-links-list {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
 }
 
 section {
@@ -27,7 +100,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 25px;
 }
 
 .project-container {
@@ -37,10 +110,11 @@ section {
   border: 1px solid #94a3b8;
   box-shadow: 0px 2px 10px 1px #030712;
   padding-bottom: 100px;
+  margin-bottom: 2rem;
 }
 
 .project-container > img {
-  width: 100%;
+  width: 90vw;
   align-self: center;
 }
 
@@ -62,14 +136,9 @@ section {
   font-size: 2rem;
 }
 
-.project-links-list {
-  display: flex;
-  gap: 16px;
-  list-style: none;
-}
-
-.icon {
-  width: 24px;
+footer {
+  background-color: #0369a1;
+  color: #dbeafe;
 }
 
 @media (min-width: 769px) {
