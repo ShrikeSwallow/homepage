@@ -40,6 +40,7 @@ main {
   background-image: url("./images/eclipse.svg");
   background-repeat: no-repeat;
   padding: 16px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,6 +140,20 @@ section {
 footer {
   background-color: #0369a1;
   color: #dbeafe;
+  padding-top: 5px;
+}
+
+footer > * {
+  margin: 16px;
+}
+
+footer > :last-child {
+  margin: 0;
+}
+
+footer picture img {
+  width: 100%;
+  transform: translateY(1%);
 }
 
 @media (min-width: 769px) {

@@ -214,9 +214,7 @@ export default class Display {
     contactInfo.classList.add("contact-info");
     const addressDetails = document.createElement("p");
     addressDetails.classList.add("address-details");
-    addressDetails.textContent = `42 Unknown Way
-    London
-    GH42 7OP`;
+    addressDetails.innerHTML = `42 Unknown Way<br />London<br />GH42 7OP`;
     contactInfo.appendChild(addressDetails);
 
     const phoneNumber = document.createElement("p");
@@ -266,5 +264,16 @@ export default class Display {
     contactInfo.appendChild(socials);
 
     footer.appendChild(contactInfo);
+
+    const footerPic = document.createElement("picture");
+    const picSource = document.createElement("source");
+    picSource.srcset = guppy;
+    picSource.media = "(min-width: 769px)";
+    footerPic.appendChild(picSource);
+    const picImg = document.createElement("img");
+    picImg.src = guppySmall;
+    picImg.alt = "";
+    footerPic.appendChild(picImg);
+    footer.appendChild(footerPic);
   };
 }
