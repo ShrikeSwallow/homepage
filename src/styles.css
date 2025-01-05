@@ -60,21 +60,19 @@ header figure {
   align-items: center;
 }
 
-header figure img {
-  box-shadow: 0px 2px 10px 1px #030712;
-}
-
 header figure figcaption {
   font-family: "EB Garamond", serif;
   color: white;
   font-size: 3rem;
   transform: translateY(-100%);
   text-shadow: 2px 2px gray;
+
   margin-bottom: -2rem;
 }
 
 header figure img {
   width: 60vw;
+  box-shadow: 0px 2px 10px 1px #030712;
 }
 
 header article {
@@ -157,6 +155,81 @@ footer picture img {
 }
 
 @media (min-width: 769px) {
+  main {
+    padding: 64px;
+  }
+
+  header {
+    margin-top: 64px;
+    border: 1px solid #94a3b8;
+    background-color: #fafafa;
+    box-shadow: 0px 2px 10px 1px #030712;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 64px 16px;
+  }
+
+  header .social-media-list {
+    display: none;
+  }
+
+  header figure {
+    transform: translate(-48px, -160px);
+    display: grid;
+    grid-template-areas: "caption" "image";
+  }
+
+  header figure img {
+    grid-area: image;
+    width: 35vw;
+  }
+
+  header figure figcaption {
+    grid-area: caption;
+    transform: translate(90%, 70%);
+    margin-bottom: -2rem;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: stretch;
+  }
+
+  section .my-work {
+    grid-column-start: span 2;
+  }
+
+  .project-container > img {
+    width: 100%;
+  }
+
+  footer {
+    padding: 48px;
+    display: grid;
+    grid-template-rows: repeat(3, min(min-content, 1fr));
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  footer .social-media-list {
+    justify-content: flex-start;
+  }
+
+  footer .icon {
+    width: 24px;
+  }
+
+  footer picture {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
+
+  footer picture img {
+    transform: translateY(0%);
+  }
 }
 
 @media (min-width: 1280px) {
