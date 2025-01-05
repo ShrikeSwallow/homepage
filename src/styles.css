@@ -200,6 +200,7 @@ footer picture img {
 
   section .my-work {
     grid-column-start: span 2;
+    justify-self: start;
   }
 
   .project-container > img {
@@ -233,4 +234,72 @@ footer picture img {
 }
 
 @media (min-width: 1280px) {
+  main {
+    padding: 96px;
+    background-position: 0 -150px;
+  }
+
+  header {
+    margin-top: 0;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 48px 16px;
+    gap: 150px;
+  }
+
+  header figure {
+    transform: initial;
+    transform: scale(1.5);
+    display: grid;
+    grid-template-areas: "image" "caption";
+  }
+
+  header figure img {
+    grid-area: image;
+    width: 25vw;
+  }
+
+  header figure figcaption {
+    grid-area: caption;
+    justify-self: center;
+    transform: translate(0, -100%);
+    margin-bottom: -3.5rem;
+  }
+
+  header article {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header h1,
+  header p {
+    align-self: flex-start;
+  }
+
+  header .social-media-list {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: stretch;
+  }
+
+  section .my-work {
+    grid-column-start: span 3;
+  }
+
+  footer picture {
+    justify-self: end;
+  }
+
+  footer picture img {
+    max-height: 40vh;
+    width: auto;
+  }
 }
